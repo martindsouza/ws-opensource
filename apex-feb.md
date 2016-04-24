@@ -137,3 +137,7 @@ Edit the JS and CSS files using AFEB:
   - The page should refresh. If you click `Run JS` see the change in the console.
   - Play around with the function to add some additional code. _Note: based on how this function is triggered the `this` object is the `this` from the Dynamic Action._
 - Run the application from the original URL (ex: `http://training01.oraopensource.com/apex/f?p=127`). This is what everyone else using the application will see. Your changes won't affect anyone else until you upload the files to the Application Static Files.
+
+## Summary
+
+AFEB is a very powerful tool to rapidly work with web files such as images, JS, and CSS. This workshop used some extremely basic web files but the underlying concept is the exact same for more complex situations.

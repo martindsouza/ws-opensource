@@ -1,5 +1,7 @@
 # Open Source Workshop: OOS Utils
 
+TODO update USB with latest copy
+
 [OOS Utils](https://github.com/OraOpenSource/oos-utils) is a common set of utility functions to help with your PL/SQL and APEX development. _Note: this product is still in beta_
 
 In this section you will install and use OOS Utils for both PL/SQL and APEX development
