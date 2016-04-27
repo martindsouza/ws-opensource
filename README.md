@@ -2,7 +2,7 @@
 
 This workshop will cover some new and popular open source products for Oracle PL/SQL and APEX development.
 
-**Feedback: ** Please leave any feedback of this workshop as an [issue](/issues) in this project.
+*Feedback: * Please leave any feedback of this workshop as an [issue](./issues) in this project.
 
 Name  | Description
 --- | ---
