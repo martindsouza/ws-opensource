@@ -11,7 +11,7 @@ Go to [github.com](https://github.com/) and create an account.
 
 Despite your coding level, product knowledge, or availability everyone can help out with open source projects. The main thing you can do is log any bugs, feature requests, general feedback, etc. These are all stored as _Issues_ for each project, despite what the name suggests.
 
-To create your first issue click on the [Issues](TODO URL) link at the top of the page and add a dummy issue. Since you're not a team member you won't be able to apply and labels, milestones, or assign the ticket to someone. That's ok as most project owners will sort that out for you.
+To create your first issue click on the [Issues](https://github.com/martindsouza/ws-opensource/issues) link at the top of the page and add a dummy issue. Since you're not a team member you won't be able to apply and labels, milestones, or assign the ticket to someone. That's ok as most project owners will sort that out for you.
 
 In the future when using open source products you know should know how to create an issue.
 
