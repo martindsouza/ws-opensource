@@ -6,7 +6,13 @@ In this workshop you'll install, configure, and run AFEB.
 
 ## Background
 
-TODO walk through current options of updating files in APEX
+Most APEX developers either do some flavor of the following when adding JS, CSS, etc to their APEX applications:
+
+- Store it inline in the APEX objects
+- Store it in the page's CSS or JS properties
+- Save it to a file, upload it to _Static Application Files_
+
+All of these can be inefficient ways of developing content as changes to the code usually involve doing some editing in APEX, save, wait, tab change, refresh, test.
 
 ## Setup
 
@@ -24,7 +30,7 @@ _Mac users: If you have XCode installed, you do not need to install Git as you a
 
 ### Web Files
 
-Somewhere on your system create the following directory setup (root folder `www` can be what ever you want).
+Copy the `www` folder from the USB drive `AFEB Files` somewhere on your system. The required folder for AFEB is as follows:
 
 ```
 /www
@@ -34,6 +40,8 @@ Somewhere on your system create the following directory setup (root folder `www`
     /js
   /dist
 ```
+
+For future reference, the following commands can automatically generate this folder structure for you:
 
 **Linux:**
 ```bash
@@ -45,7 +53,6 @@ mkdir -p www/{src/{img,css,js},dist}
 md www\src www\src\img www\src\css www\src\js www\dist
 ```
 
-We will add content to these folders later on.
 
 
 
@@ -72,9 +79,9 @@ In the root folder of `apex-frontend-boost` there is a file called `config.json`
 ```json
 {
   "apexconnect": {
-      "appURL": "TODO_URL_TO_YOUR_APPLICATION",
-      "srcFolder": "TODO_SRC_FOLDER",
-      "distFolder": "TODO_DEST_FOLDER",
+      "appURL": "CHANGEME_URL_TO_YOUR_APPLICATION",
+      "srcFolder": "CHANGEME_SRC_FOLDER",
+      "distFolder": "CHANGEME_DEST_FOLDER",
       "cssConcat": {
         "enabled": false
       },
@@ -85,9 +92,9 @@ In the root folder of `apex-frontend-boost` there is a file called `config.json`
 }
 ```
 
-Change the entries prefixed with `TODO` with the values below. They will differ depending on where you created the `www` folders above. For the examples below the following directories were used:
+Change the entries prefixed with `CHANGEME` with the values below. They will differ depending on where you created the `www` folders above. For the examples below the following directories were used:
 
-- APEX: 'http://training01.oraopensource.com/apex/f?p=TODO'   
+- APEX: 'http://training01.oraopensource.com/apex/f?p=CHANGEME'   
   - This will depend on the server you were assigned to and the application ID for this open source workshop. Be sure the application ID matches your application.
 - Linux/OSx: `/Users/giffy/Temp/github/www`
 - Windows: `C:\Users\marti\Downloads\www`
@@ -95,9 +102,9 @@ Change the entries prefixed with `TODO` with the values below. They will differ 
 
 Parameter | Linux/OSx | Windows
 --- | --- | ---
-`TODO_URL_TO_YOUR_APPLICATION` | `http://training01.oraopensource.com/apex/f?p=TODO` | `<same>`
-`TODO_SRC_FOLDER` | `/Users/giffy/Temp/github/www/src` | `C:\Users\marti\Downloads\www`
-`TODO_DEST_FOLDER` | ``/Users/giffy/Temp/github/www/dest` | `C:\Users\marti\Downloads\www\dest`
+`CHANGEME_URL_TO_YOUR_APPLICATION` | `http://training01.oraopensource.com/apex/f?p=CHANGEME` | `<same>`
+`CHANGEME_SRC_FOLDER` | `/Users/giffy/Temp/github/www/src` | `C:\Users\marti\Downloads\www`
+`CHANGEME_DEST_FOLDER` | ``/Users/giffy/Temp/github/www/dest` | `C:\Users\marti\Downloads\www\dest`
 
 A few things to note:
 
@@ -109,7 +116,7 @@ To ensure that everything is configured properly go to the directory where AFEB 
 
 ### APEX Configuration
 
-- Go to the [`apex-setup`](TODO) guide and do the setup for `Option 1) Standard` in your application.
+- Go to the [APEX Setup](https://github.com/OraOpenSource/apex-frontend-boost/blob/master/docs/apex-setup.md) guide and do the setup for `Option 1) Standard` in your application.
   - For the purposes of this workshop you don't need to create the `DEV_ONLY` Build Option.
 
 TODO move the src original files into Software
