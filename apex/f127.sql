@@ -27,7 +27,7 @@ prompt APPLICATION 127 - Open Source Workshop
 -- Application Export:
 --   Application:     127
 --   Name:            Open Source Workshop
---   Date and Time:   22:14 Monday April 25, 2016
+--   Date and Time:   23:00 Monday April 25, 2016
 --   Exported By:     GIFFY
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -83,7 +83,7 @@ wwv_flow_api.create_flow(
 ,p_display_id=>nvl(wwv_flow_application_install.get_application_id,127)
 ,p_owner=>nvl(wwv_flow_application_install.get_schema,'GIFFY')
 ,p_name=>nvl(wwv_flow_application_install.get_application_name,'Open Source Workshop')
-,p_alias=>nvl(wwv_flow_application_install.get_application_alias,'127')
+,p_alias=>nvl(wwv_flow_application_install.get_application_alias,'OOSWORKSHOP')
 ,p_page_view_logging=>'YES'
 ,p_page_protection_enabled_y_n=>'Y'
 ,p_checksum_salt=>'644A2B4702BDDA7717739E0DCE0245DCA6ED1AB13C516720C8895A64BD04B35F'
@@ -106,7 +106,7 @@ wwv_flow_api.create_flow(
 ,p_rejoin_existing_sessions=>'N'
 ,p_csv_encoding=>'Y'
 ,p_last_updated_by=>'GIFFY'
-,p_last_upd_yyyymmddhh24miss=>'20160425221443'
+,p_last_upd_yyyymmddhh24miss=>'20160425230041'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>5
 ,p_ui_type_name => null
