@@ -1,7 +1,5 @@
 # Open Source Workshop: OOS Utils
 
-TODO update USB with latest copy
-
 [OOS Utils](https://github.com/OraOpenSource/oos-utils) is a common set of utility functions to help with your PL/SQL and APEX development. _Note: this product is still in beta_
 
 In this section you will install and use OOS Utils for both PL/SQL and APEX development
@@ -59,10 +57,10 @@ Using the [`oos_util_string`](http://oos-utils.readthedocs.org/en/latest/oos_uti
 ```sql
 declare
 begin
-  dbms_output.put_line(oos_util_string.to_char(sysdate));
-  dbms_output.put_line(oos_util_string.to_char(true));
-  dbms_output.put_line(oos_util_string.to_char(false));
-  dbms_output.put_line(oos_util_string.to_char(systimestamp));
+  dbms_output.put_line(sysdate);
+  dbms_output.put_line(true);
+  dbms_output.put_line(false);
+  dbms_output.put_line(systimestamp);
 end;
 /
 ```
@@ -88,8 +86,8 @@ When displaying a report sometimes the requirements state to trim a string if it
 ```sql
 select
   case
-    when length(:my_string) > 100 then
-      substr(:my_string, 1,3) || '...'
+    when length(:my_string) > 20 then
+      substr(:my_string, 1,17) || '...'
     else
       :my_string
   end my_string
@@ -97,7 +95,7 @@ from dual
 ;
 ```
 
-This does work however it poses two issues. First is that you need to code it each time, and the second is that it does a hard cut at 100 characters. It can be difficult to tell if it cut halfway through a word or not. `oos_util_string` has a `truncate` which handles these issues.
+This does work however it poses two issues. First is that you need to code it each time, and the second is that it does a hard cut at 20 characters. It can be difficult to tell if it cut halfway through a word or not. `oos_util_string` has a `truncate` which handles these issues.
 
 Run the following code and modify both the `p_length` and `p_by_word` parameters to see the differences
 
@@ -115,13 +113,13 @@ from apex_dictionary ad
 
 ## APEX Tools
 
-OOS Utils has an entire package dedicated to APEX.
+OOS Utils has an entire package dedicated to APEX called [oos_util_apex](https://github.com/OraOpenSource/oos-utils/blob/master/docs/oos_util_apex.md).
 
 ### Developer Mode
 
 Sometimes you may only want to display content when you are developing an APEX. An example of this is if you have a custom APEX error function that displays a user friendly message. When developing the application you may want to dump all the content on the screen to help the developer find the bug.
 
-On P10 there is a region at the bottom of the page to display all the items in session state and their values. For obvious reasons you only want to display this while developing the application. Modify the region's condition to only display when in developing.
+On P3 there is a region at the bottom of the page to display all the items in session state and their values. For obvious reasons you only want to display this while developing the application. Modify the region's condition to only display when in developing. Test by logging out of the APEX developer and refreshing P3; the additional region should no longer be displayed.
 
 _Note: The purpose of this exercise is just to demo the appropriate method. In most applications a Build Option called `DEV_ONLY` is created and turned on/off for development._
 
@@ -147,7 +145,7 @@ To view APEX specific content in SQL Developer run the following code using your
 ```sql
 declare
 begin
-  oos_util_apex.join_session(p_session_id => :app_session);
+  oos_util_apex.join_session(p_session_id => 'CHANGEME');
 end;
 /
 ```
@@ -161,7 +159,7 @@ A few caveats with this procedure:
 
 #### Exercise
 
-- Now that you've joined an APEX session in SQL Developer, write and execute a block of code in SQL Developer to:
+- Now that you've joined an APEX session **in SQL Developer**, write and execute a block of code in SQL Developer to:
   - Delete all Collections
   - Create a new collection called `DEPTS` which is a simple query from the `dept` table.
     - Hint: Look at `P10` processes for code samples

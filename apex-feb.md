@@ -61,7 +61,12 @@ md www\src www\src\img www\src\css www\src\js www\dist
 Create a directory where you'd like AFEB to be installed in. This is **not** the same directory where your web files reside in.
 
 
-_Note: If you did not install Git just use the zip version provided in with the USB stick and do not run `git clone`_
+_Notes:_
+
+- _If you did not install Git just use the zip version provided in with the USB stick and do not run `git clone`_
+- _`npm install` will probably take a while_
+- _Windows users: You may get an error about missing C++ libraries. You can ignore._
+
 ```bash
 git clone https://github.com/OraOpenSource/apex-frontend-boost.git
 cd apex-frontend-boost
@@ -103,8 +108,8 @@ Change the entries prefixed with `CHANGEME` with the values below. They will dif
 Parameter | Linux/OSx | Windows
 --- | --- | ---
 `CHANGEME_URL_TO_YOUR_APPLICATION` | `http://training01.oraopensource.com/apex/f?p=CHANGEME` | `<same>`
-`CHANGEME_SRC_FOLDER` | `/Users/giffy/Temp/github/www/src` | `C:\Users\marti\Downloads\www`
-`CHANGEME_DEST_FOLDER` | ``/Users/giffy/Temp/github/www/dest` | `C:\Users\marti\Downloads\www\dest`
+`CHANGEME_SRC_FOLDER` | `/Users/giffy/Temp/github/www/src` | `C:\\Users\\marti\\Downloads\\www\\src`
+`CHANGEME_DEST_FOLDER` | ``/Users/giffy/Temp/github/www/dest` | `C:\\Users\\marti\\Downloads\\www\\dest`
 
 A few things to note:
 
@@ -113,13 +118,13 @@ A few things to note:
 
 To ensure that everything is configured properly go to the directory where AFEB is installed in and run: `npm start -- --project=apexconnect`. If everything works a new tab in your browser will automatically be opened with a URL similar to: `http://localhost:3000/apex/f?p=127`. The key thing here is `http://localhost:3000`. Despite the reference to `localhost` it is still running your application on the `oraopensource.com` training server.
 
+**NOTE Chrome Users**: There is a [known issue](https://github.com/OraOpenSource/apex-frontend-boost/issues/70) right know with Chrome and AFEB. Copy the URL and paste into a different browser.
+
 
 ### APEX Configuration
 
 - Go to the [APEX Setup](https://github.com/OraOpenSource/apex-frontend-boost/blob/master/docs/apex-setup.md) guide and do the setup for `Option 1) Standard` in your application.
   - For the purposes of this workshop you don't need to create the `DEV_ONLY` Build Option.
-
-TODO move the src original files into Software
 
 
 ## Develop with AFEB
