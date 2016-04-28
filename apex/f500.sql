@@ -27,7 +27,7 @@ prompt APPLICATION 500 - APEX ADMIN MONITORING
 -- Application Export:
 --   Application:     500
 --   Name:            APEX ADMIN MONITORING
---   Date and Time:   17:20 Monday April 25, 2016
+--   Date and Time:   22:12 Monday April 25, 2016
 --   Exported By:     GIFFY
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -83,7 +83,7 @@ wwv_flow_api.create_flow(
 ,p_display_id=>nvl(wwv_flow_application_install.get_application_id,500)
 ,p_owner=>nvl(wwv_flow_application_install.get_schema,'HR')
 ,p_name=>nvl(wwv_flow_application_install.get_application_name,'APEX ADMIN MONITORING')
-,p_alias=>nvl(wwv_flow_application_install.get_application_alias,'F_500')
+,p_alias=>nvl(wwv_flow_application_install.get_application_alias,'500')
 ,p_page_view_logging=>'YES'
 ,p_page_protection_enabled_y_n=>'Y'
 ,p_checksum_salt=>'3ACD230D1F1E38C0C39651AD4442F5BF747B8B57778884F02888E3291F24BFD2'
@@ -108,7 +108,7 @@ wwv_flow_api.create_flow(
 ,p_rejoin_existing_sessions=>'N'
 ,p_csv_encoding=>'Y'
 ,p_last_updated_by=>'GIFFY'
-,p_last_upd_yyyymmddhh24miss=>'20160425171622'
+,p_last_upd_yyyymmddhh24miss=>'20160425221232'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_ui_type_name => null
 );
